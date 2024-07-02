@@ -50,6 +50,8 @@ class Game{
         }catch(e){
 
         }
+        this.printBoardWithPieces(); 
+
         if(this.board.isDraw()){
             this.player1.send(JSON.stringify({type:"MESSAGE",MESSAGE: DRAW})); 
             this.player2.send(JSON.stringify({type:"MESSAGE",MESSAGE: DRAW})); 
@@ -66,7 +68,6 @@ class Game{
             }
             return ; 
         }
-        this.printBoardWithPieces(); 
     }
 }
 
