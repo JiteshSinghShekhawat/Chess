@@ -11,5 +11,4 @@ wss.on('connection', function connection(ws) {
     game.removeUser(ws); 
   })
   game.addNewUser(ws); 
-  ws.send('done'); 
 });
