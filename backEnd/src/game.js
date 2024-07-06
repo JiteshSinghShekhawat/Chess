@@ -99,12 +99,12 @@ class Game{
             if(this.#moveCount%2 === 0 ){
                 move = 'white' ; 
                 this.stopTimer(this.timer1); 
-                this.startTimer(this.timer2); 
+                this.startTimer(this.timer2,this.player2); 
             }
             else{
                 move = 'black'; 
                 this.stopTimer(this.timer2); 
-                this.startTimer(this.timer1); 
+                this.startTimer(this.timer1,this.player1); 
             }
             this.player1.send(JSON.stringify({type:"LOG",player: move,move : to}))
             this.player2.send(JSON.stringify({type:"LOG",player: move,move : to}))
