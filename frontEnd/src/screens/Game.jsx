@@ -21,8 +21,8 @@ function Game() {
   const [moves,setMoves] = useState([{}]); 
   const [white,setWhite] = useState(true); 
   const [last,setLast]  = useState(null); 
-  const [timer1,setTimer1] = useState({minutes: 0, seconds:10}); 
-  const [timer2,setTimer2] = useState({minutes: 0, seconds:10}); 
+  const [timer1,setTimer1] = useState({minutes: 3, seconds:0}); 
+  const [timer2,setTimer2] = useState({minutes: 3, seconds:0}); 
 
   useEffect(()=>{
     if(!socket)return ;
