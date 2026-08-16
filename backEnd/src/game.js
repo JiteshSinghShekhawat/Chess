@@ -17,8 +17,8 @@ class Game{
         this.player2 = player2;
         this.printBoardWithPieces(); 
         this.gameOn = true; 
-        this.timer1 = {minutes: 0, seconds:10, isActive: false}; 
-        this.timer2 = {minutes: 0, seconds:10, isActive: false}; 
+        this.timer1 = {minutes: 3, seconds:0, isActive: false}; 
+        this.timer2 = {minutes: 3, seconds:0, isActive: false}; 
         this.player2.send(JSON.stringify({type:"PIECES",color: "BLACK"})); 
         this.player1.send(JSON.stringify({type:"PIECES",color: "WHITE"})); 
         this.startTimer(this.timer1,this.player1); 
